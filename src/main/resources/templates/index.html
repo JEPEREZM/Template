@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<h1>Usuarios</h1>
+<table style="width:80%;">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Nombre</th>
+        <th>Saldo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="usuario:${usuarios}">
+        <td th:text="${usuario.id}"></td>
+        <td th:text="${usuario.username}"></td>
+        <td th:text="${usuario.nombre}"></td>
+        <td th:text="${usuario.saldo}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
